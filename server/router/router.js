@@ -13,5 +13,10 @@ app.get('/addstory/:title', async (req, res) => {
    
     res.send(result)
 })
+app.get('/stories', async (req, res) => {
+    let result = await shareModel.find()
+   
+    res.send(result)
+})
 
 module.exports = app;

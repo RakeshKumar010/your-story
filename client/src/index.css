@@ -37,10 +37,10 @@ background-color: rebeccapurple;
     border-radius: 10px;
 }
 .dashbord a{
-        color: black;
+        color: white;
     text-decoration: none;
     padding: 1rem;
-    background-color: rebeccapurple;
+    background-color: rgb(44, 184, 210);
         border-radius: 10px;
 }
 .div2 img{
@@ -117,6 +117,9 @@ background-color: rebeccapurple;
         font-size: 2vw;
         font-family: monospace;
 }
+.logo .siteName{
+    font-size: 2rem;
+}
 .funnystories,.topStories
 ,.random{
     position: absolute;
@@ -143,10 +146,10 @@ background-color: rebeccapurple;
             align-items: center;
             gap:1rem;
 }
+
 .thumbnail{
     width: 20vw;
         /* height: 33vh; */
-        border: 2px solid black;
 }
 .formClass input{
     width: 29vw;
@@ -171,3 +174,37 @@ background-color: rebeccapurple;
         background: lightgray;
         border-radius: 20px;
     }
+    .storiesImg{
+        width: 30%;
+        border-radius: 10px;
+    }
+.storiesMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+
+}
+.stories{
+    background-color: aliceblue;
+    padding: 2rem;
+    display: flex;
+    width: 70vw;
+    gap: 2rem;
+    border: 2px solid black;
+    margin: 3rem;
+    border-radius: 10px;
+}
+.storiesinnerDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.storiesBtn{
+    width: 10vw;
+    padding: 10px 10px ;
+    background-color: lightblue;
+    border-radius: 10px;
+    border: 0;
+}
