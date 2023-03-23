@@ -32,7 +32,7 @@
     background: rgb(223, 167, 220);
         background: linear-gradient(229deg, rgba(223, 167, 220, 1) 39%, rgba(130, 192, 212, 1) 100%);
 }
-.navMain ul li a:hover{
+.navMain ul li a:active{
 background-color: rebeccapurple;
     border-radius: 10px;
 }
@@ -131,3 +131,42 @@ background-color: rebeccapurple;
         font-family: monospace;
 
 }
+.liveMain,.formClass{
+    border: 2px solid black;
+        display: flex;
+            flex-direction: column;
+            width: 46vw;
+            padding: 2rem;
+            min-height: 65vh;
+            justify-content: center;
+            align-items: center;
+            gap:1rem;
+}
+.thumbnail{
+    width: 32vw;
+        /* height: 33vh; */
+        border: 2px solid black;
+}
+.formClass input{
+    width: 29vw;
+        padding: 5px;
+        background: lightgrey;
+        border-radius: 20px;
+}
+.formClass button{
+        padding: 8px 3rem;
+            background: lightgray;
+            border-radius: 20px;
+}
+.adstoryMain{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+}
+.previewBtn{
+    padding: 8px 3rem;
+        background: lightgray;
+        border-radius: 20px;
+    }
