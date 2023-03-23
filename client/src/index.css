@@ -98,14 +98,14 @@ background-color: rebeccapurple;
 }
 .homeContainer div{
     width: 48vw;
-    border: 2px solid black;
+
     position: relative;
 }
 .homeContainer div img{
     width: 100%;
     height: 100%;
 }
-.topStories,.topmotivation{
+.topmotivation{
     position: absolute;
         top: 48%;
         left: 22%;
@@ -117,8 +117,8 @@ background-color: rebeccapurple;
         font-size: 2vw;
         font-family: monospace;
 }
-.funnystories,
-.random{
+.funnystories,.topStories
+,.random{
     position: absolute;
         top: 48%;
         left: 32%;
@@ -131,6 +131,7 @@ background-color: rebeccapurple;
         font-family: monospace;
 
 }
+
 .liveMain,.formClass{
     border: 2px solid black;
         display: flex;
@@ -143,7 +144,7 @@ background-color: rebeccapurple;
             gap:1rem;
 }
 .thumbnail{
-    width: 32vw;
+    width: 20vw;
         /* height: 33vh; */
         border: 2px solid black;
 }
