@@ -228,7 +228,7 @@ background-color: rgb(44, 184, 210);
     color:rgb(44, 184, 210);
     margin-right: 5px;
 }
-.linkedAbout{
+.linkedAbout,.socialmediaLink,.addstoryfooter{
     text-decoration: none;
     padding: 15px 2rem;
     font-size:larger;
@@ -241,6 +241,10 @@ background-color: rgb(44, 184, 210);
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+.socialmediaLink{
+    background-color: white;
+    color: black;
 }
 .richDadMain{
     display: flex;
@@ -271,4 +275,42 @@ background-color: rgb(44, 184, 210);
 }
 .richdadinnerDiv h1{
     font-family: sans-serif;
+}
+.footerMain{
+    display: flex;
+    gap: 3rem;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 26, 65);
+    margin: 2rem 0;
+}
+.publicyourstory{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    color: white;
+}
+.socalmedia{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.footerMain img{
+    width: 31vw;
+        height: 15vh;
+}
+.siteNamelink{
+    text-decoration: none;
+    color: black;
+}
+.siteNamelink:visited{
+    color:black ;
 }

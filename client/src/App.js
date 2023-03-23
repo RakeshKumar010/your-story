@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Stories from './components/Stories'
 import About from './components/About'
 import Book from './components/Book'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <BrowserRouter>
 
         <Nav />
+
         <Routes>
           
             
@@ -22,7 +24,6 @@ const App = () => {
             <Route path='/Books' element={<Book/>} />
             <Route path='/Stories' element={<Stories/>} />
             <Route path='/About' element={<About/>} />
-            <Route path='/Contact' element={<h1>Contact</h1>} />
              <Route path='/addstory' element={<AdStory />} />
              <Route path='/dashboard' element={<h1>dashboard</h1>} />
                   
@@ -34,8 +35,10 @@ const App = () => {
 
           
         </Routes>
-      </BrowserRouter>
+    <Footer/>
 
+        
+      </BrowserRouter>
 
     </div>
   )

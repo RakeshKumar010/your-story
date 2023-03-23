@@ -5,7 +5,9 @@ const Nav = () => {
   return (
     <div className="navMain">
       <div className="logo">
-        <p className="siteName">Your Story</p>
+        <Link to="/" className="siteNamelink">
+          <p className="siteName">Your Story</p>
+        </Link>
       </div>
       <ul>
         <li>
@@ -19,9 +21,6 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/About">About</Link>
-        </li>
-        <li>
-          <Link to="/Contact">Contact</Link>
         </li>
       </ul>
       <div className="dashbord">
