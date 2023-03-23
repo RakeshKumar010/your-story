@@ -33,7 +33,7 @@
         background: linear-gradient(229deg, rgba(223, 167, 220, 1) 39%, rgba(130, 192, 212, 1) 100%);
 }
 .navMain ul li a:active{
-background-color: rebeccapurple;
+background-color: rgb(44, 184, 210);
     border-radius: 10px;
 }
 .dashbord a{
@@ -207,4 +207,68 @@ background-color: rebeccapurple;
     background-color: lightblue;
     border-radius: 10px;
     border: 0;
+}
+.aboutMain{
+    display: flex;
+    justify-content: center;
+}
+.about{
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 2px solid black;
+    padding: 2rem;
+    font-family: system-ui;
+    margin: 3rem;
+}
+.aboutH1::first-letter{
+    font-size: 5rem;
+    color:rgb(44, 184, 210);
+    margin-right: 5px;
+}
+.linkedAbout{
+    text-decoration: none;
+    padding: 15px 2rem;
+    font-size:larger;
+    font-weight: bolder;
+    background-color: rgb(44, 184, 210);
+    color: white;
+    border-radius: 10px;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.richDadMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contaner{
+    margin: 1rem;
+    display: flex;
+        width: 70vw;
+        height: 40vh;
+        gap: 2rem;
+        border: 2px solid black;
+
+
+}
+.containerImg{
+    margin: 3rem;
+    border-radius: 20px;
+}
+.richdadinnerDiv{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+.richdadinnerDiv h1{
+    font-family: sans-serif;
 }

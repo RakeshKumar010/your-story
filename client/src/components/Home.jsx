@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import asset1 from "../assets/asset1.png";
+import asset2 from "../assets/asset2.jpg";
+import asset3 from "../assets/asset3.jpg";
+import asset4 from "../assets/asset4.jpeg";
+import asset5 from "../assets/asset5.jpg";
 const Home = () => {
   return (
     <>
@@ -20,41 +24,26 @@ const Home = () => {
           </div>
         </div>
         <div className="div2">
-          <img
-            src="https://shareherestory.vercel.app/static/media/share.b57875c89278c3c66fc4.png"
-            alt="homepage"
-          />
+          <img src={asset1} alt="homepage" />
         </div>
       </div>
       <div className="homeContainer">
         <div id="homeContainerdiv1">
           {/* <p className='topStories'>Top Motivational Stories</p> */}
           <p className="topStories">Top Short Stories</p>
-          <img
-            src="https://cdn.wallpapersafari.com/65/11/wrexsb.jpg"
-            alt="topStories"
-          />
+          <img src={asset2} alt="topStories" />
         </div>
         <div className="homeContainerdiv2">
           <p className="topmotivation">Top Motivational Stories</p>
-          <img
-            src="https://images.pexels.com/photos/1478685/pexels-photo-1478685.jpeg?cs=srgb&dl=pexels-keegan-houser-1478685.jpg&fm=jpg"
-            alt="topStories"
-          />
+          <img src={asset3} alt="topStories" />
         </div>
         <div className="homeContainerdiv3">
           <p className="funnystories">Funny Stories</p>
-          <img
-            src="https://wallpaperaccess.com/full/504272.jpg"
-            alt="topStories"
-          />
+          <img src={asset4} alt="topStories" />
         </div>
         <div className="homeContainerdiv4">
           <p className="random">Random Stories</p>
-          <img
-            src="https://wallpapercave.com/wp/wp7885983.jpg"
-            alt="topStories"
-          />
+          <img src={asset5} alt="topStories" />
         </div>
       </div>
     </>
