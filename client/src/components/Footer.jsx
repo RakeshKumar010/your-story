@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import shareyourstory from "../assets/shareyourstory.jpg";
 const Footer = () => {
+  let localData = localStorage.getItem("user");
   return (
     <div className="footerMain">
       <img src={shareyourstory} alt="shareyourstory" />
@@ -10,9 +11,21 @@ const Footer = () => {
         <p>
           Share your story with shareherestory where world listens your story
         </p>
-        <Link to="/addstory" className="addstoryfooter">
-          Add Story
-        </Link>
+        {localData ? (
+          <Link to="/addstory" className="addstoryfooter">
+            Add Story
+          </Link>
+        ) : (
+          <Link
+            to="/"
+            className="addstoryfooter"
+            onClick={() => {
+              alert("Please Login");
+            }}
+          >
+            Add Story
+          </Link>
+        )}
       </div>
       <div className="socalmedia">
         <a
