@@ -399,7 +399,7 @@ background-color: rgb(44, 184, 210);
     margin: 10px 0;
     width: 100%;
 }
-#checkBok{
+#checkBoklogin,#checkBokSignup{
         width: 40px;
             height: 19px;
     margin-right: 10px;
@@ -413,12 +413,12 @@ background-color: rgb(44, 184, 210);
 .popUp{
         display: flex;
             gap: 1rem;
-            background-color: white;
-            padding: 5px 3px;
+            background-color: rgba(255, 255, 255, 0.253);
+            padding: 5px ;
             flex-direction: column;
             border-radius: 10px;
                 position: absolute;
-                    top: 3rem;
+                    top: 50px;
                     display: none;
 }
 #popOpen{

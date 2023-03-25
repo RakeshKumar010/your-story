@@ -19,12 +19,39 @@ const Nav = () => {
       };
     });
   };
-  const submitFun = (e) => {
+  const submitFun = async (e) => {
     e.preventDefault();
-    let localData = localStorage.setItem("user", JSON.stringify(val));
-    document.getElementById("loginMainId").style.display = "none";
-    document.getElementById("signupMainId").style.display = "none";
-    navigater("/");
+    const { name, email, number, password } = val;
+    if (name && email && number && password) {
+      let result = await fetch("http://localhost:5000/signup", {
+        method: "post",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ name, email, number, password }),
+      });
+      result = await result.json();
+      if (result) {
+        document.getElementById("loginMainId").style.display = "none";
+        document.getElementById("signupMainId").style.display = "none";
+        let localData = localStorage.setItem("user", JSON.stringify(result));
+        navigater("/");
+        console.log(result);
+      }
+    } else if (email && password) {
+      let loginData = await fetch("http://localhost:5000/login", {
+        method: "post",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      loginData = await loginData.json();
+      if (loginData) {
+        document.getElementById("loginMainId").style.display = "none";
+        document.getElementById("signupMainId").style.display = "none";
+        let localData = localStorage.setItem("user", JSON.stringify(loginData));
+        console.log(loginData);
+      }
+    } else {
+      alert("data not found");
+    }
   };
   let localData = localStorage.getItem("user");
   return (
@@ -144,7 +171,7 @@ const Nav = () => {
             required
           />
           <div className="checkBokDiv">
-            <input type="checkbox" name="iagree" id="checkBok" required />
+            <input type="checkbox" name="iagree" id="checkBoklogin" required />
             <label htmlFor="iagree">
               I agree to the terms of use and have read and understand the
               privacy policy
@@ -208,7 +235,7 @@ const Nav = () => {
             required
           />
           <div className="checkBokDiv">
-            <input type="checkbox" name="iagree" id="checkBok" />
+            <input type="checkbox" name="iagree" id="checkBokSignup" required />
             <label htmlFor="iagree">
               I agree to the terms of use and have read and understand the
               privacy policy
