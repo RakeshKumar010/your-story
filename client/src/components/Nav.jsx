@@ -23,7 +23,7 @@ const Nav = () => {
     e.preventDefault();
     const { name, email, number, password } = val;
     if (name && email && number && password) {
-      let result = await fetch("http://localhost:5000/signup", {
+      let result = await fetch("https://your-story-tct9.onrender.com/signup", {
         method: "post",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ name, email, number, password }),
@@ -37,11 +37,14 @@ const Nav = () => {
         console.log(result);
       }
     } else if (email && password) {
-      let loginData = await fetch("http://localhost:5000/login", {
-        method: "post",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      let loginData = await fetch(
+        "https://your-story-tct9.onrender.com/login",
+        {
+          method: "post",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
       loginData = await loginData.json();
       if (loginData) {
         document.getElementById("loginMainId").style.display = "none";
