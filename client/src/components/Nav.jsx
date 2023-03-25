@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import ArrowDropDownCircleIcon from "@mui/icons-material/ArrowDropDownCircle";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 const Nav = () => {
+  const navigater = useNavigate();
   const [val, setVal] = useState({
+    name: "",
+    number: "",
     email: "",
     password: "",
   });
@@ -18,6 +22,9 @@ const Nav = () => {
   const submitFun = (e) => {
     e.preventDefault();
     let localData = localStorage.setItem("user", JSON.stringify(val));
+    document.getElementById("loginMainId").style.display = "none";
+    document.getElementById("signupMainId").style.display = "none";
+    navigater("/");
   };
   let localData = localStorage.getItem("user");
   return (
@@ -44,9 +51,37 @@ const Nav = () => {
               <Link to="/About">About</Link>
             </li>
           </ul>
+
           <div className="dashbord">
             <Link to="/addstory">Add Story</Link>
-            <Link to="/profile">Profile</Link>
+            <div className="popupDivMain">
+              <ArrowDropDownCircleIcon
+                id="popDown"
+                onClick={() => {
+                  document.getElementById("popupId").style.display = "flex";
+                  document.getElementById("popDown").style.display = "none";
+                  document.getElementById("popOpen").style.display = "block";
+                }}
+              />
+              <KeyboardDoubleArrowUpIcon
+                id="popOpen"
+                onClick={() => {
+                  document.getElementById("popupId").style.display = "none";
+                  document.getElementById("popDown").style.display = "block";
+                  document.getElementById("popOpen").style.display = "none";
+                }}
+              />
+              <div className="popUp" id="popupId">
+                <Link to="/profile">Profile</Link>
+                <Link
+                  onClick={() => {
+                    let localData = localStorage.clear("user");
+                  }}
+                >
+                  Logout
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
@@ -77,7 +112,7 @@ const Nav = () => {
                 document.getElementById("loginMainId").style.display = "block";
               }}
             >
-              Login
+              LogIn / SignUp
             </p>
           </div>
         </div>
@@ -99,12 +134,78 @@ const Nav = () => {
             name="email"
             onChange={changeFun}
             placeholder="Enter Your Email Adderss"
+            required
           />
           <input
             type="password"
             name="password"
             onChange={changeFun}
             placeholder="Enter Your Password "
+            required
+          />
+          <div className="checkBokDiv">
+            <input type="checkbox" name="iagree" id="checkBok" required />
+            <label htmlFor="iagree">
+              I agree to the terms of use and have read and understand the
+              privacy policy
+            </label>
+          </div>
+          <div className="otherOption">
+            <p>Don't have an account?</p>
+            <h3
+              onClick={() => {
+                document.getElementById("loginMainId").style.display = "none";
+                document.getElementById("signupMainId").style.display = "block";
+              }}
+            >
+              signup
+            </h3>
+          </div>
+
+          <button>Login</button>
+        </form>
+      </div>
+
+      {/* signup */}
+      <div className="loginMain" id="signupMainId">
+        <form onSubmit={submitFun} className="loginForm">
+          <p
+            onClick={() => {
+              document.getElementById("signupMainId").style.display = "none";
+            }}
+            className="crose"
+          >
+            x
+          </p>
+          <h1>Create your account</h1>
+
+          <input
+            type="text"
+            name="name"
+            onChange={changeFun}
+            placeholder="Enter Your Name"
+            required
+          />
+          <input
+            type="number"
+            name="number"
+            onChange={changeFun}
+            placeholder="Enter Your Number"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            onChange={changeFun}
+            placeholder="Enter Your Email Adderss"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            onChange={changeFun}
+            placeholder="Enter Your Password "
+            required
           />
           <div className="checkBokDiv">
             <input type="checkbox" name="iagree" id="checkBok" />
@@ -113,8 +214,19 @@ const Nav = () => {
               privacy policy
             </label>
           </div>
+          <div className="otherOption">
+            <p>Don't have an account?</p>
+            <h3
+              onClick={() => {
+                document.getElementById("signupMainId").style.display = "none";
+                document.getElementById("loginMainId").style.display = "block";
+              }}
+            >
+              Login
+            </h3>
+          </div>
 
-          <button>Login</button>
+          <button>Signup</button>
         </form>
       </div>
     </>
