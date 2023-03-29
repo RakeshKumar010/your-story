@@ -18,7 +18,7 @@ const Stories = () => {
       {data &&
         data.map((value) => {
           return (
-            <div className="stories">
+            <div className="stories" key={data._id}>
               <img
                 src={value.thumbnail}
                 alt="storiesthum"

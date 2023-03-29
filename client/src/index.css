@@ -12,6 +12,11 @@
         color: black;
         width: 100%;
 }
+.secnavMain{
+    display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+}
 .navMain ul,.dashbord{
     list-style-type: none;
         display: flex;
@@ -129,6 +134,12 @@ background-color: rgb(44, 184, 210);
 .logo .siteName{
     font-size: 2rem;
 }
+.siteName::first-letter{
+    font-size:3rem;
+    font-family:sans-serif;
+    text-shadow: 1px 1px 8px black;
+    color: rebeccapurple;
+}
 .funnystories,.topStories
 ,.random{
     position: absolute;
@@ -199,6 +210,7 @@ background-color: rgb(44, 184, 210);
     background-color: aliceblue;
     padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
     width: 70vw;
     gap: 2rem;
     border: 2px solid black;
@@ -223,7 +235,7 @@ background-color: rgb(44, 184, 210);
 }
 .about{
     width: 70vw;
-    height: 60vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -264,16 +276,19 @@ background-color: rgb(44, 184, 210);
 .contaner{
     margin: 1rem;
     display: flex;
+    justify-content: center;
         width: 70vw;
-        height: 40vh;
+        height: auto;
         gap: 2rem;
         border: 2px solid black;
-
+        flex-wrap: wrap;
+        padding: 3rem;
 
 }
 .containerImg{
-    margin: 3rem;
-    border-radius: 20px;
+    
+    border-radius: 10px;
+    width: 200px;
 }
 .richdadinnerDiv{
     margin: 2rem;
@@ -288,11 +303,12 @@ background-color: rgb(44, 184, 210);
 .footerMain{
     display: flex;
     gap: 3rem;
-    height: 60vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     background-color: rgb(26, 26, 65);
     flex-wrap: wrap;
+    padding: 3rem 0;
     width: 100%;
 }
 .publicyourstory{
@@ -423,4 +439,81 @@ background-color: rgb(44, 184, 210);
 }
 #popOpen{
     display: none;
+}
+#navsideIconId,#navclearIconId{
+    display: none;
+}
+
+@media screen and (max-width:902px) {
+    .secnavMain{
+        position: absolute;
+            top: 5rem;
+            z-index: 2;
+      width:100vw;
+ 
+    padding: 4rem;
+    }
+    #secnavMainId{
+    display: none;
+    }
+    .secnavMain,.secnavMain ul,.dashbord{
+        
+      display: flex;
+      flex-direction: column;
+      background-color: gray;
+       
+    }
+        .secnavMain ul{
+            margin-bottom: 2rem;
+        }
+        
+    .navMain{
+        justify-content: space-between;
+        padding: 0;
+        height: 11vh;
+    }
+    #navsideIconId{
+        display: block;
+    }
+    .navsideIcon,.navclearIcon{
+        margin-right: 2rem;
+    }
+    .navMain .logo{
+        margin-left: 2rem;
+    }
+    .stories{
+        margin: 1rem;
+        width: 90%;
+    }
+    .footerMain img{
+        width: 50%;
+        height:auto;
+        
+    }
+    #popupId{
+
+        flex-direction: row;
+       
+            width: 100%;
+            justify-content: space-between;
+           
+            margin-top: 50vh;
+    }
+    .storiesImg{
+        width: 100%;
+    }
+    .storiesBtn{
+        width: auto;
+    }
+    .contaner{
+        width: 90%;
+        padding: 1rem;
+    }
+    .about{
+        width: 90%;
+    }
+    .linkedAbout{
+        width: 100%;
+    }
+    
 }

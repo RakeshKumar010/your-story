@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LiveAdStory from "./LiveAdStory";
 
 const AdStory = () => {
   const [data, setData] = useState("");
-
+  const [userid, setUserid] = useState("");
+  useEffect(() => {
+    function getUserIdFun() {
+      let auth = localStorage.getItem("user");
+      auth = JSON.parse(auth);
+      setUserid(auth._id);
+    }
+    getUserIdFun();
+  });
   const [val, setVal] = useState({
+    userid: "",
     title: "",
     thumbnail: "",
     description: "",
@@ -14,13 +23,10 @@ const AdStory = () => {
   //liveadstory
 
   async function getData(title) {
-    let result = await fetch(
-      `https://your-story-tct9.onrender.com/addstory/${title}`,
-      {
-        method: "get",
-        headers: { "content-type": "application/json" },
-      }
-    );
+    let result = await fetch(`http://localhost:5000/addstory/${title}`, {
+      method: "get",
+      headers: { "content-type": "application/json" },
+    });
     result = await result.json();
     setData(result);
   }
@@ -50,7 +56,12 @@ const AdStory = () => {
       <div className="adstoryMain">
         <form onSubmit={submitFun} className="formClass">
           <h1>Share Your Story,Today!</h1>
-
+          <input
+            type="text"
+            name="userid"
+            onChange={changeFun}
+            value={userid}
+          />
           <input
             type="text"
             name="title"
