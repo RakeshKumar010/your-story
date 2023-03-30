@@ -447,7 +447,7 @@
 @media screen and (max-width: 902px) {
   .secnavMain {
     position: absolute;
-    top: 6rem;
+    top: 5rem;
 
     z-index: 2;
     width: 100vw;
@@ -546,5 +546,8 @@
   .btnHome a {
     padding: 5px;
     width: max-content;
+  }
+  .loginForm {
+    width: 100%;
   }
 }
