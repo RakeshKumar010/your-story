@@ -265,6 +265,17 @@
   align-items: center;
   gap: 1rem;
 }
+.bookReadBtn,
+.storiesBtn {
+  text-decoration: none;
+  color: black;
+  /* border: 1px solid; */
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 1px 1px 5px;
+  border-radius: 10px;
+  text-align: center;
+}
 .socialmediaLink {
   background-color: white;
   color: black;
@@ -285,21 +296,23 @@
   border: 2px solid black;
   flex-wrap: wrap;
   padding: 3rem;
+  border-radius: 10px;
 }
 .containerImg {
   border-radius: 10px;
   width: 200px;
 }
 .richdadinnerDiv {
-  margin: 2rem;
+  /* margin: 2rem; */
+  width: 42vw;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
 }
-.richdadinnerDiv h1 {
+/* .richdadinnerDiv h1 {
   font-family: sans-serif;
-}
+} */
 .footerMain {
   display: flex;
   gap: 3rem;
@@ -443,7 +456,15 @@
 #navclearIconId {
   display: none;
 }
-
+.fullStorycontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.storyDescription {
+  height: 5vh;
+  overflow: hidden;
+}
 @media screen and (max-width: 902px) {
   .secnavMain {
     position: absolute;
@@ -502,9 +523,7 @@
   .storiesImg {
     width: 100%;
   }
-  .storiesBtn {
-    width: auto;
-  }
+
   .contaner {
     width: 90%;
     padding: 1rem;

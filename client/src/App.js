@@ -7,6 +7,7 @@ import Stories from './components/Stories'
 import About from './components/About'
 import Book from './components/Book'
 import Footer from './components/Footer'
+import FullStory from './components/FullStory'
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
             <Route path='/About' element={<About/>} />
              <Route path='/addstory' element={<AdStory />} />
              <Route path='/profile' element={<h1>dashboard</h1>} />
-            
+            <Route path='/Stories/:id' element={<FullStory/>}/>
                   
 
 

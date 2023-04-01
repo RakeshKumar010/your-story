@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const Stories = () => {
   const [data, setData] = useState();
   useEffect(() => {
@@ -18,7 +18,7 @@ const Stories = () => {
       {data &&
         data.map((value) => {
           return (
-            <div className="stories" key={data._id}>
+            <div className="stories" key={value._id}>
               <img
                 src={value.thumbnail}
                 alt="storiesthum"
@@ -26,8 +26,10 @@ const Stories = () => {
               />
               <div className="storiesinnerDiv">
                 <h1>{value.title}</h1>
-                <p>{value.description}</p>
-                <button className="storiesBtn">Read Story</button>
+                <p className="storyDescription">{value.description}</p>
+                <Link to={"/Stories/" + value._id} className="storiesBtn">
+                  Read Story
+                </Link>
               </div>
             </div>
           );

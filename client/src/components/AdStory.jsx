@@ -23,10 +23,13 @@ const AdStory = () => {
   //liveadstory
 
   async function getData(title) {
-    let result = await fetch(`http://localhost:5000/addstory/${title}`, {
-      method: "get",
-      headers: { "content-type": "application/json" },
-    });
+    let result = await fetch(
+      `https://your-story-tct9.onrender.com/addstory/${title}`,
+      {
+        method: "get",
+        headers: { "content-type": "application/json" },
+      }
+    );
     result = await result.json();
     setData(result);
   }
@@ -48,7 +51,6 @@ const AdStory = () => {
       headers: { "content-type": "application/json" },
     });
     result = await result.json();
-    console.log(result);
     getData(val.title);
   };
   return (

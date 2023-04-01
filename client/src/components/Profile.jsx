@@ -1,11 +1,7 @@
 import React from "react";
 
 const Profile = () => {
-  return (
-    <div>
-      <button>LogOut</button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Profile;

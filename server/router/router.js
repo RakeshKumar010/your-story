@@ -27,5 +27,21 @@ app.get('/stories', async (req, res) => {
    
     res.send(result)
 })
+app.get('/stories/:id', async (req, res) => {
+    let result = await shareModel.findOne({_id:req.params.id})
+   
+    res.send(result)
+})
+
+app.get('/profile/:key', async (req, res) => {
+    let result = await shareModel.find({
+        "$or":[
+            {userid:{$regex:req.params.key}},
+            
+        ]
+    })
+    res.send(result)
+
+})
 
 module.exports = app;
