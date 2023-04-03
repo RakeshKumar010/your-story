@@ -173,11 +173,19 @@
   width: 20vw;
   /* height: 33vh; */
 }
-.formClass input {
+.formClass input,
+.formClass textarea {
   width: 29vw;
   padding: 5px;
-  background: lightgrey;
-  border-radius: 20px;
+  background: #d3d3d3;
+  border-radius: 10px;
+  /* border-radius: 20px 10px 10px 20px; */
+
+  border: 1px solid;
+}
+.formClass textarea {
+  height: 15vh;
+  /* border-radius: 20px 10px 10px 20px; */
 }
 .formClass button {
   padding: 8px 3rem;
@@ -264,6 +272,23 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+#profileMain {
+  justify-content: flex-start;
+}
+#profileId {
+  width: 41vw;
+}
+.profileBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profileinnerBtn {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  align-items: center;
 }
 .bookReadBtn,
 .storiesBtn {

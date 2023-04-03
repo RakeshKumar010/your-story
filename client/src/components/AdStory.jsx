@@ -13,7 +13,6 @@ const AdStory = () => {
     getUserIdFun();
   });
   const [val, setVal] = useState({
-    userid: "",
     title: "",
     thumbnail: "",
     description: "",
@@ -47,7 +46,7 @@ const AdStory = () => {
     e.preventDefault();
     let result = await fetch("https://your-story-tct9.onrender.com/addstory", {
       method: "post",
-      body: JSON.stringify({ ...val }),
+      body: JSON.stringify({ ...val, userid }),
       headers: { "content-type": "application/json" },
     });
     result = await result.json();
@@ -58,12 +57,7 @@ const AdStory = () => {
       <div className="adstoryMain">
         <form onSubmit={submitFun} className="formClass">
           <h1>Share Your Story,Today!</h1>
-          <input
-            type="text"
-            name="userid"
-            onChange={changeFun}
-            value={userid}
-          />
+          <input type="text" name="userid" value={userid} hidden />
           <input
             type="text"
             name="title"
@@ -76,17 +70,18 @@ const AdStory = () => {
             onChange={changeFun}
             placeholder="Enter the thumbnail"
           />
-          <input
-            type="text"
-            name="description"
-            onChange={changeFun}
-            placeholder="Enter the description"
-          />
+
           <input
             type="text"
             name="type"
             onChange={changeFun}
             placeholder="Enter the type"
+          />
+          <textarea
+            type="text"
+            name="description"
+            onChange={changeFun}
+            placeholder="Enter the story....."
           />
           <button>Add</button>
         </form>

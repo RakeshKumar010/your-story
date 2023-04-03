@@ -8,6 +8,8 @@ import About from './components/About'
 import Book from './components/Book'
 import Footer from './components/Footer'
 import FullStory from './components/FullStory'
+import Profile from './components/Profile'
+import UpdateStories from './components/UpdateStories'
 
 const App = () => {
   return (
@@ -27,8 +29,9 @@ const App = () => {
             <Route path='/Stories' element={<Stories/>} />
             <Route path='/About' element={<About/>} />
              <Route path='/addstory' element={<AdStory />} />
-             <Route path='/profile' element={<h1>dashboard</h1>} />
+             <Route path='/profile' element={<Profile/>} />
             <Route path='/Stories/:id' element={<FullStory/>}/>
+            <Route path='/updatestory/:id' element={<UpdateStories/>}/>
                   
 
 
