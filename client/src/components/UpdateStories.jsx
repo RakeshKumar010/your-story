@@ -25,7 +25,7 @@ const UpdateStories = () => {
       //   console.log(params);
 
       let result = await fetch(
-        `http://localhost:5000/updatestory/${params.id}`
+        `https://your-story-tct9.onrender.com/updatestory/${params.id}`
       );
       result = await result.json();
       //   console.log(result);
@@ -40,10 +40,13 @@ const UpdateStories = () => {
   //liveadstory
 
   async function getData(title) {
-    let result = await fetch(`http://localhost:5000/addstory/${title}`, {
-      method: "get",
-      headers: { "content-type": "application/json" },
-    });
+    let result = await fetch(
+      `https://your-story-tct9.onrender.com/addstory/${title}`,
+      {
+        method: "get",
+        headers: { "content-type": "application/json" },
+      }
+    );
     result = await result.json();
     console.log(result);
 
@@ -65,17 +68,20 @@ const UpdateStories = () => {
   const submitFun = async (e) => {
     e.preventDefault();
     // console.log(params.id);
-    let result = await fetch(`http://localhost:5000/updatestory/${params.id}`, {
-      method: "put",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        title,
-        thumbnail,
-        description,
-        type,
-        userid,
-      }),
-    });
+    let result = await fetch(
+      `https://your-story-tct9.onrender.com/updatestory/${params.id}`,
+      {
+        method: "put",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          title,
+          thumbnail,
+          description,
+          type,
+          userid,
+        }),
+      }
+    );
     result = await result.json();
     if (result) {
       console.log("sucesfully");

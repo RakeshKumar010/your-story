@@ -115,7 +115,17 @@ const Nav = () => {
                   }}
                 />
                 <div className="popUp" id="popupId">
-                  <Link to="/profile">Profile</Link>
+                  <Link
+                    to="/profile"
+                    onClick={() => {
+                      document.getElementById("popupId").style.display = "none";
+                      document.getElementById("popDown").style.display =
+                        "block";
+                      document.getElementById("popOpen").style.display = "none";
+                    }}
+                  >
+                    Profile
+                  </Link>
                   <Link
                     onClick={() => {
                       let localData = localStorage.clear("user");

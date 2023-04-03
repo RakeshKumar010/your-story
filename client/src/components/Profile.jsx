@@ -8,7 +8,9 @@ const Profile = () => {
     async function getFun() {
       let auth = localStorage.getItem("user");
       auth = JSON.parse(auth);
-      let result = await fetch(`http://localhost:5000/profile/${auth._id}`);
+      let result = await fetch(
+        `https://your-story-tct9.onrender.com/profile/${auth._id}`
+      );
       result = await result.json();
 
       setData(result);
@@ -17,7 +19,7 @@ const Profile = () => {
   });
 
   const deleteFun = async (key) => {
-    const result = await fetch(`http://localhost:5000/${key}`, {
+    const result = await fetch(`https://your-story-tct9.onrender.com/${key}`, {
       method: "delete",
       headers: { "content-type": "application/json" },
     });
@@ -46,7 +48,10 @@ const Profile = () => {
                         deleteFun(value._id);
                       }}
                     />
-                    <Link to={"/updatestory/" + value._id}>
+                    <Link
+                      to={"/updatestory/" + value._id}
+                      className="updateIcon"
+                    >
                       <EditRoadIcon />
                     </Link>
                   </div>

@@ -183,6 +183,9 @@
 
   border: 1px solid;
 }
+.updateIcon {
+  color: black;
+}
 .formClass textarea {
   height: 15vh;
   /* border-radius: 20px 10px 10px 20px; */
