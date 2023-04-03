@@ -11,24 +11,18 @@ const UpdateStories = () => {
   const [thumbnail, setUpdateThumbnail] = useState();
   const [description, setUpdateDescription] = useState();
   const [type, setUpdateType] = useState();
-  //   const [val, setVal] = useState({
-  //     title: "",
-  //     thumbnail: "",
-  //     description: "",
-  //     type: "",
-  //   });
+
   useEffect(() => {
     async function getUserIdFun() {
       let auth = localStorage.getItem("user");
       auth = JSON.parse(auth);
       setUserid(auth._id);
-      //   console.log(params);
 
       let result = await fetch(
         `https://your-story-tct9.onrender.com/updatestory/${params.id}`
       );
       result = await result.json();
-      //   console.log(result);
+
       setUpdateTitle(result.title);
       setUpdateThumbnail(result.thumbnail);
       setUpdateDescription(result.description);
@@ -36,8 +30,6 @@ const UpdateStories = () => {
     }
     getUserIdFun();
   }, [params.id]);
-
-  //liveadstory
 
   async function getData(title) {
     let result = await fetch(
@@ -67,7 +59,7 @@ const UpdateStories = () => {
   };
   const submitFun = async (e) => {
     e.preventDefault();
-    // console.log(params.id);
+
     let result = await fetch(
       `https://your-story-tct9.onrender.com/updatestory/${params.id}`,
       {

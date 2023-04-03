@@ -360,6 +360,11 @@
   gap: 3rem;
   color: white;
 }
+.publishedName {
+  padding: 1rem;
+  background: lightblue;
+  text-align: center;
+}
 .socalmedia {
   display: flex;
   flex-direction: column;
@@ -502,6 +507,13 @@
     width: 100vw;
 
     padding: 4rem;
+  }
+  #profileMain {
+    justify-content: center;
+  }
+
+  #profileId {
+    width: 90%;
   }
   #secnavMainId {
     display: none;
