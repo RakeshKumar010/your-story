@@ -9,12 +9,16 @@ const Profile = () => {
     async function getFun() {
       let auth = localStorage.getItem("user");
       auth = JSON.parse(auth);
-      let result = await fetch(
-        `https://your-story-tct9.onrender.com/profile/${auth._id}`
-      );
-      result = await result.json();
-      setLocalData(auth.name);
-      setData(result);
+      if (auth) {
+        let result = await fetch(
+          `https://your-story-tct9.onrender.com/profile/${auth._id}`
+        );
+        result = await result.json();
+        setLocalData(auth.name);
+        setData(result);
+      } else {
+        auth = "";
+      }
     }
     getFun();
   });

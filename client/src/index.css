@@ -36,6 +36,12 @@
   text-decoration: none;
   padding: 1rem;
   color: black;
+  border-radius: 10px;
+
+  transition: background-color 2s;
+}
+.navMain ul li a:hover {
+  background-color: rgb(44, 184, 210);
 }
 .homeMain {
   width: 100%;
@@ -48,10 +54,10 @@
     rgba(130, 192, 212, 1) 100%
   );
 }
-.navMain ul li a:active {
+/* .navMain ul li a:active {
   background-color: rgb(44, 184, 210);
   border-radius: 10px;
-}
+} */
 .dashbord p,
 .dashbord a {
   color: white;
@@ -298,11 +304,20 @@
   text-decoration: none;
   color: black;
   /* border: 1px solid; */
-  width: fit-content;
+  /* width: fit-content; */
+  width: 100px;
+
   padding: 10px;
   box-shadow: 1px 1px 5px;
   border-radius: 10px;
   text-align: center;
+  transition: background-color 2s, width 2s;
+}
+
+.bookReadBtn:hover,
+.storiesBtn:hover {
+  width: 150px;
+  background-color: rgb(44, 184, 210);
 }
 .socialmediaLink {
   background-color: white;
