@@ -29,21 +29,26 @@ const Home = () => {
       </div>
       <div className="homeContainer">
         <div id="homeContainerdiv1">
-          {/* <p className='topStories'>Top Motivational Stories</p> */}
-          <p className="topStories">Top Short Stories</p>
-          <img src={asset2} alt="topStories" />
+          <Link to="/childstory">
+            <p className="topStories imagePara">Child Stories</p>
+            <img src={asset2} alt="topStories" />
+          </Link>
         </div>
         <div className="homeContainerdiv2">
-          <p className="topmotivation">Top Motivational Stories</p>
-          <img src={asset3} alt="topStories" />
+          <Link to="/motivationalstory">
+            <p className="topmotivation imagePara">Motivational Stories</p>
+            <img src={asset3} alt="topStories" />
+          </Link>
         </div>
         <div className="homeContainerdiv3">
-          <p className="funnystories">Funny Stories</p>
+          <p className="funnystories imagePara">Funny Stories</p>
           <img src={asset4} alt="topStories" />
         </div>
         <div className="homeContainerdiv4">
-          <p className="random">Random Stories</p>
-          <img src={asset5} alt="topStories" />
+          <Link to="/randomstory">
+            <p className="random imagePara">Random Stories</p>
+            <img src={asset5} alt="topStories" />
+          </Link>
         </div>
       </div>
     </>

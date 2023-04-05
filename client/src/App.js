@@ -11,6 +11,9 @@ import FullStory from './components/FullStory'
 import Profile from './components/Profile'
 import UpdateStories from './components/UpdateStories'
 import Top from './components/Top'
+import ChildStory from './components/ChildStory'
+import MotivationalStory from './components/MotivationalStory'
+import RandomStory from './components/RandomStory'
 
 const App = () => {
   return (
@@ -33,6 +36,9 @@ const App = () => {
              <Route path='/profile' element={<Profile/>} />
             <Route path='/Stories/:id' element={<FullStory/>}/>
             <Route path='/updatestory/:id' element={<UpdateStories/>}/>
+            <Route path='/childstory' element={<ChildStory/>}/>
+            <Route path='/motivationalstory' element={<MotivationalStory/>}/>
+            <Route path='/randomstory' element={<RandomStory/>}/>
                   
 
 

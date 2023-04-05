@@ -57,5 +57,31 @@ app.delete('/:id', async (req, res) => {
     let result = await shareModel.deleteOne({ _id: req.params.id })
     res.send(result)
 })
-
+app.get('/childstory/:key', async (req, res) => {
+    let result = await shareModel.find({
+        "$or": [
+            {type:{$regex:req.params.key}},
+            
+        ]
+    })
+    res.send(result)
+})
+app.get('/motivationalstory/:key', async (req, res) => {
+    let result = await shareModel.find({
+        "$or": [
+            {type:{$regex:req.params.key}},
+            
+        ]
+    })
+    res.send(result)
+})
+app.get('/randomstory/:key', async (req, res) => {
+    let result = await shareModel.find({
+        "$or": [
+            {type:{$regex:req.params.key}},
+            
+        ]
+    })
+    res.send(result)
+})
 module.exports = app;
