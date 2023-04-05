@@ -234,6 +234,7 @@
   margin: 3rem;
   border-radius: 10px;
 }
+
 .storiesinnerDiv {
   display: flex;
   flex-direction: column;
@@ -287,6 +288,11 @@
 }
 #profileId {
   width: 41vw;
+
+  transition: width 2s;
+}
+#profileId:active {
+  width: 52vw;
 }
 .profileBtn {
   display: flex;
@@ -311,12 +317,11 @@
   box-shadow: 1px 1px 5px;
   border-radius: 10px;
   text-align: center;
-  transition: background-color 2s, width 2s;
+  transition: background-color 1s;
 }
 
 .bookReadBtn:hover,
 .storiesBtn:hover {
-  width: 150px;
   background-color: rgb(44, 184, 210);
 }
 .socialmediaLink {
@@ -412,6 +417,7 @@
 .loginMain {
   display: none;
 }
+
 .loginForm {
   width: 30vw;
   background: rgb(223, 223, 223);
@@ -512,8 +518,37 @@
 .storyDescription {
   height: 5vh;
   overflow: hidden;
+  transition: height 3s, padding 2s, border-radius 2s, background-color 1s;
 }
+.storyDescription:hover {
+  cursor: pointer;
+  height: 15vh;
+  color: white;
+  padding: 6px 1rem;
+  border-radius: 10px;
+
+  background-color: grey;
+}
+.topMain {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1;
+  box-shadow: 1px 1px 8px inset black;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  border-radius: 100px;
+  background-color: rgb(44, 184, 210);
+}
+
 @media screen and (max-width: 902px) {
+  .publicyourstory {
+    text-align: center;
+  }
   .secnavMain {
     position: absolute;
     top: 5rem;

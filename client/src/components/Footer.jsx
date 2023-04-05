@@ -17,7 +17,6 @@ const Footer = () => {
           </Link>
         ) : (
           <Link
-            to="/"
             className="addstoryfooter"
             onClick={() => {
               alert("Please Login");

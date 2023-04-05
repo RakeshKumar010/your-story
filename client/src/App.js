@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import FullStory from './components/FullStory'
 import Profile from './components/Profile'
 import UpdateStories from './components/UpdateStories'
+import Top from './components/Top'
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
       <BrowserRouter>
 
         <Nav />
-
+    <Top/>
 
         <Routes>
           
