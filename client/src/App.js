@@ -14,6 +14,8 @@ import Top from './components/Top'
 import ChildStory from './components/ChildStory'
 import MotivationalStory from './components/MotivationalStory'
 import RandomStory from './components/RandomStory'
+import FunnyStory from './components/FunnyStory'
+
 
 const App = () => {
   return (
@@ -25,8 +27,6 @@ const App = () => {
     <Top/>
 
         <Routes>
-          
-            
 
             <Route path='/' element={<Home/>} />
             <Route path='/Books' element={<Book/>} />
@@ -39,15 +39,10 @@ const App = () => {
             <Route path='/childstory' element={<ChildStory/>}/>
             <Route path='/motivationalstory' element={<MotivationalStory/>}/>
             <Route path='/randomstory' element={<RandomStory/>}/>
-                  
-
-
-
-
-            
-
+            <Route path='/funnystory' element={<FunnyStory/>}/>
           
         </Routes>
+
     <Footer/>
 
         

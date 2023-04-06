@@ -4,7 +4,7 @@ import shareyourstory from "../assets/shareyourstory.jpg";
 const Footer = () => {
   let localData = localStorage.getItem("user");
   return (
-    <div className="footerMain">
+    <div className="footerMain p-top">
       <img src={shareyourstory} alt="shareyourstory" />
       <div className="publicyourstory">
         <h1>Publish Your Story, Today!🤩</h1>
@@ -33,7 +33,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="socialmediaLink"
         >
-          Follow on Github
+          <span>Follow on Github</span>
         </a>
         <a
           href="https://www.linkedin.com/in/rakesh-kumar-146238220/"
@@ -41,7 +41,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="socialmediaLink"
         >
-          Follow on Linkedin
+          <span>Follow on Linkedin</span>
         </a>
         <p>Made with ❤️ by Rakesh</p>
       </div>

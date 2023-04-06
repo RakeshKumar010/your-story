@@ -54,7 +54,7 @@ const AdStory = () => {
   };
   return (
     <>
-      <div className="adstoryMain">
+      <div className="adstoryMain p-top2">
         <form onSubmit={submitFun} className="formClass">
           <h1>Share Your Story,Today!</h1>
           <input type="text" name="userid" value={userid} hidden />

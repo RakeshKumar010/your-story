@@ -3,13 +3,14 @@ import "react-loading-skeleton/dist/skeleton.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const RandomStory = () => {
+const FunnyStory = () => {
   const [data, setData] = useState();
   const [isLoading, setisLoading] = useState(true);
+
   useEffect(() => {
     async function getData() {
       let result = await fetch(
-        "https://your-story-tct9.onrender.com/randomstory/story",
+        "https://your-story-tct9.onrender.com/funnystory/funny",
         {
           method: "get",
           headers: { "content-type": "application/json" },
@@ -113,6 +114,4 @@ const RandomStory = () => {
   );
 };
 
-export default RandomStory;
-
-// export default RandomStory
+export default FunnyStory;

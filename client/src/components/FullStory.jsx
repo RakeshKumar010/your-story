@@ -18,9 +18,9 @@ const FullStory = () => {
       console.log(data);
     }
     getFun();
-  });
+  }, []);
   return (
-    <div className="fullStorycontainer">
+    <div className="fullStorycontainer p-top">
       <div className="stories">
         <img src={thumbnail} alt="storiesthum" className="storiesImg" />
         <div className="storiesinnerDiv">

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Book = () => {
   return (
     <>
-      <div className="richDadMain">
+      <div className="richDadMain p-top2">
         <div className="contaner">
           <img src={richDad} alt="richDad" className="containerImg" />
           <div className="richdadinnerDiv">

@@ -82,7 +82,7 @@ const UpdateStories = () => {
   };
   return (
     <>
-      <div className="adstoryMain">
+      <div className="adstoryMain p-top2">
         <form onSubmit={submitFun} className="formClass">
           <h1>Share Your Story,Today!</h1>
           <p>{title}</p>

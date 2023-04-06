@@ -84,4 +84,13 @@ app.get('/randomstory/:key', async (req, res) => {
     })
     res.send(result)
 })
+app.get('/funnystory/:key', async (req, res) => {
+    let result = await shareModel.find({
+        "$or": [
+            {type:{$regex:req.params.key}},
+            
+        ]
+    })
+    res.send(result)
+})
 module.exports = app;

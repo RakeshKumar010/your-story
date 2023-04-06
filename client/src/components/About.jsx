@@ -2,7 +2,7 @@ import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const About = () => {
   return (
-    <div className="aboutMain">
+    <div className="aboutMain p-top">
       <div className="about">
         <h1 className="aboutH1">About</h1>
         <p className="aboutPara">
