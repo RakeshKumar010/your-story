@@ -83,8 +83,7 @@
 }
 
 .DeleteLoader {
-  background: url("https://cdn.dribbble.com/users/592004/screenshots/2953817/___.gif")
-    no-repeat center center;
+  background: url("./assets/deleteloader.gif") no-repeat center center;
   background-size: 30%;
   background-color: white;
 
@@ -97,8 +96,7 @@
   z-index: 2;
 }
 .addstoryloader {
-  background: url("https://i.pinimg.com/originals/af/8d/9a/af8d9ac62dd43026957e1cf82a027637.gif")
-    no-repeat center center;
+  background: url("./assets//addstoryloader.gif") no-repeat center center;
   background-size: 30%;
   background-color: white;
 
@@ -111,8 +109,7 @@
   z-index: 2;
 }
 .loginloader {
-  background: url("https://media3.giphy.com/media/3og0IvGtnDyPHCRaYU/giphy.gif")
-    no-repeat center center;
+  background: url("./assets//loginerror.webp") no-repeat center center;
   background-size: 15%;
   background-color: rgba(240, 248, 255, 0.342);
   backdrop-filter: blur(10px);
