@@ -20,8 +20,14 @@ app.post('/signup', async (req, res) => {
     res.send(result)
 })
 app.post('/login', async (req, res) => {
-    let result =await userSchema.findOne(req.body)
+    let result = await userSchema.findOne(req.body)
+    if (result) {
     res.send(result)
+        
+    } else {
+    res.send({"error":"not avai"})
+        
+    }
 })
 app.get('/addstory/:title', async (req, res) => {
     let result = await shareModel.findOne({title:req.params.title})
