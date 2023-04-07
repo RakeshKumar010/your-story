@@ -1,6 +1,6 @@
 ## Your Story
 
-what your do?
+what your Can ?
 :- Your Story is a platform that allows you to write your own story and read some books.
 
 Link:-
