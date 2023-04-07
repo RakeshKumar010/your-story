@@ -69,7 +69,7 @@ const Nav = () => {
         setisLoginLoader(true);
         setTimeout(() => {
           setisLoginLoader(false);
-        }, 1000);
+        }, 2000);
         console.log("data not found");
       } else {
         document.getElementById("loginMainId").style.display = "none";
@@ -177,7 +177,10 @@ const Nav = () => {
                         to="/"
                         onClick={() => {
                           localStorage.clear("user");
-                          location.reload();
+
+                          setTimeout(() => {
+                            location.reload();
+                          }, 1000);
                         }}
                       >
                         Logout
