@@ -88,8 +88,8 @@ Start the server
 - 𝘓𝘰𝘨𝘪𝘯 & 𝘚𝘪𝘨𝘯𝘶𝘱 𝘶𝘴𝘦𝘳 𝘈𝘤𝘤𝘰𝘶𝘯𝘵
 - Preloader
 - 𝘚𝘵𝘰𝘳𝘺 𝘍𝘪𝘭𝘵𝘦𝘳
-- 𝘜𝘴𝘦𝘳 Profile 𝘏𝘪𝘴 𝘚𝘵𝘰𝘳𝘺
-- 𝘜𝘴𝘦𝘳 𝘊𝘢𝘯 𝘈𝘥𝘥 𝘴𝘵𝘰𝘳𝘺 𝘤𝘰𝘮𝘮𝘦𝘯𝘵 𝘢𝘯𝘥 𝘥𝘦𝘭𝘦𝘵𝘦 & View Story
+- 𝘜𝘴𝘦𝘳 Profile with 𝘏𝘪𝘴 𝘚𝘵𝘰𝘳𝘺
+- 𝘜𝘴𝘦𝘳 𝘊𝘢𝘯 𝘈𝘥𝘥, Update, 𝘢𝘯𝘥 D𝘦𝘭𝘦𝘵𝘦 Story View
 - 𝘜𝘴𝘦𝘳 𝘊𝘢𝘯 Read 𝘣𝘰𝘰𝘬𝘴
 
 ## 1. Home Page
