@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LiveAdStory from "./LiveAdStory";
-import { json, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const UpdateStories = () => {
   const [data, setData] = useState("");

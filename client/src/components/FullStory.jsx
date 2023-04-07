@@ -18,7 +18,7 @@ const FullStory = () => {
       console.log(data);
     }
     getFun();
-  }, []);
+  }, [params.id]);
   return (
     <div className="fullStorycontainer p-top">
       <div className="stories">

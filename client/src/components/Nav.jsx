@@ -44,9 +44,9 @@ const Nav = () => {
       if (result) {
         document.getElementById("loginMainId").style.display = "none";
         document.getElementById("signupMainId").style.display = "none";
-        let localData = localStorage.setItem("user", JSON.stringify(result));
+        localStorage.setItem("user", JSON.stringify(result));
         navigater("/");
-        console.log(result);
+        // console.log(result);
       }
     } else if (email && password) {
       let loginData = await fetch(
@@ -61,8 +61,8 @@ const Nav = () => {
       if (loginData) {
         document.getElementById("loginMainId").style.display = "none";
         document.getElementById("signupMainId").style.display = "none";
-        let localData = localStorage.setItem("user", JSON.stringify(loginData));
-        console.log(loginData);
+        localStorage.setItem("user", JSON.stringify(loginData));
+        // console.log(loginData);
         navigater("/");
       }
     } else {
@@ -128,7 +128,7 @@ const Nav = () => {
                   </Link>
                   <Link
                     onClick={() => {
-                      let localData = localStorage.clear("user");
+                      localStorage.clear("user");
                     }}
                   >
                     Logout

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 const LiveAdStory = ({ liveData }) => {
   return (
     <>
       <>
-        <h1>Live Preview</h1>
+        <h1 className="formh1Class">Live Preview</h1>
 
         <img src={liveData.thumbnail} alt="thum" className="thumbnail" />
         <h2>{liveData.title}</h2>

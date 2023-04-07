@@ -44,19 +44,18 @@ const AdStory = () => {
   };
   const submitFun = async (e) => {
     e.preventDefault();
-    let result = await fetch("https://your-story-tct9.onrender.com/addstory", {
+    await fetch("https://your-story-tct9.onrender.com/addstory", {
       method: "post",
       body: JSON.stringify({ ...val, userid }),
       headers: { "content-type": "application/json" },
     });
-    result = await result.json();
     getData(val.title);
   };
   return (
     <>
       <div className="adstoryMain p-top2">
         <form onSubmit={submitFun} className="formClass">
-          <h1>Share Your Story,Today!</h1>
+          <h1 className="formh1Class">Share Your Story,Today!</h1>
           <input type="text" name="userid" value={userid} hidden />
           <input
             type="text"

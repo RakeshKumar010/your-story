@@ -32,7 +32,7 @@ const Profile = () => {
   }, []);
 
   const deleteFun = async (key) => {
-    const result = await fetch(`https://your-story-tct9.onrender.com/${key}`, {
+    await fetch(`https://your-story-tct9.onrender.com/${key}`, {
       method: "delete",
       headers: { "content-type": "application/json" },
     });
