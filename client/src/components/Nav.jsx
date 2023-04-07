@@ -69,7 +69,9 @@ const Nav = () => {
       alert("data not found");
     }
   };
+
   let localData = localStorage.getItem("user");
+
   return (
     <>
       {localData ? (
@@ -82,21 +84,31 @@ const Nav = () => {
           <div className="secnavMain" id="secnavMainId">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={navclearIconFun}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/Books">Books</Link>
+                <Link to="/Books" onClick={navclearIconFun}>
+                  Books
+                </Link>
               </li>
               <li>
-                <Link to="/Stories">Stories</Link>
+                <Link to="/Stories" onClick={navclearIconFun}>
+                  Stories
+                </Link>
               </li>
               <li>
-                <Link to="/About">About</Link>
+                <Link to="/About" onClick={navclearIconFun}>
+                  About
+                </Link>
               </li>
             </ul>
 
             <div className="dashbord">
-              <Link to="/addstory">Add Story</Link>
+              <Link to="/addstory" onClick={navclearIconFun}>
+                Add Story
+              </Link>
               <div className="popupDivMain">
                 <ArrowDropDownCircleIcon
                   id="popDown"
@@ -122,11 +134,19 @@ const Nav = () => {
                       document.getElementById("popDown").style.display =
                         "block";
                       document.getElementById("popOpen").style.display = "none";
+
+                      document.getElementById("navclearIconId").style.display =
+                        "none";
+                      document.getElementById("navsideIconId").style.display =
+                        "block";
+                      document.getElementById("secnavMainId").style.display =
+                        "none";
                     }}
                   >
                     Profile
                   </Link>
                   <Link
+                    to="/"
                     onClick={() => {
                       localStorage.clear("user");
                     }}

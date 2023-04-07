@@ -657,7 +657,7 @@
   }
   .secnavMain {
     position: absolute;
-    top: 5rem;
+    top: 11vh;
 
     z-index: 2;
     width: 100vw;
@@ -690,7 +690,7 @@
   .dashbord {
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: white;
   }
   .secnavMain ul {
     margin-bottom: 2rem;
